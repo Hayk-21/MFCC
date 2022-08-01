@@ -1,9 +1,9 @@
 import numpy as np
 
-def hann(Frame_size=1024):
-    w = np.ndarray(Frame_size)
-    for i in range(Frame_size):
-        alpha = (2*np.pi*i/(Frame_size - 1))
+def hann(FFT_size=1024):
+    w = np.ndarray(FFT_size)
+    for i in range(FFT_size):
+        alpha = (2*np.pi*i/(FFT_size - 1))
         w[i] = (1 - np.cos(alpha))/2
     return w
 
